@@ -9,7 +9,7 @@ fn part_2(input: &str) -> u32 {
     input.lines().map(|x| x.to_string()).map(process_line_b).sum::<u32>()
 }
 
-fn process_line_b(line: String) -> u32 {
+fn process_line(line: String) -> u32 {
     let new_line = line
         .replace("one", "o1e")
         .replace("two", "t2o")

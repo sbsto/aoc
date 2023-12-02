@@ -1,6 +1,5 @@
 #[derive(Debug)]
 struct Game {
-    id: String,
     red: Vec<usize>,
     blue: Vec<usize>,
     green: Vec<usize>,
@@ -12,18 +11,6 @@ struct Turn {
     blue: usize,
     green: usize,
 }
-
-struct Limit {
-    red: usize,
-    blue: usize,
-    green: usize,
-}
-
-const LIMIT: Limit = Limit {
-    red: 12,
-    blue: 14,
-    green: 13,
-};
 
 fn main() {
     let input = include_str!("input.txt");
@@ -56,12 +43,6 @@ fn parse_text(input: &str) -> Vec<Game> {
 
         let line_parsed = x.parse::<String>().expect("should be a string");
         let split_at_game = line_parsed.split(":").collect::<Vec<&str>>();
-        let id = split_at_game
-            .first()
-            .expect("should have game")
-            .chars()
-            .filter(|ch| ch.is_digit(10))
-            .collect::<String>();
 
         split_at_game
             .last()
@@ -101,7 +82,6 @@ fn parse_text(input: &str) -> Vec<Game> {
             });
 
         let game = Game {
-            id: id.to_string(),
             red,
             blue,
             green,

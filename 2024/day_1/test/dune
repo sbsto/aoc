@@ -1,0 +1,7 @@
+(test
+ (name part_1)
+ (libraries lib_1 files))
+
+(test
+ (name part_2)
+ (libraries lib_2 files))

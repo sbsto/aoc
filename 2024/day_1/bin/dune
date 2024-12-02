@@ -1,0 +1,9 @@
+(executable
+ (public_name part_1)
+ (name part_1)
+ (libraries lib_1 files))
+
+(executable
+ (public_name part_2)
+ (name part_2)
+ (libraries lib_2 files))

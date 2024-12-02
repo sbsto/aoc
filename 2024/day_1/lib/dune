@@ -1,0 +1,12 @@
+(library
+ (modules lib_1)
+ (name lib_1))
+
+(library
+  (modules lib_2)
+  (name lib_2))
+
+(library
+ (modules files)
+ (name files)
+ (libraries str))

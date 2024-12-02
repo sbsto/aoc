@@ -7,3 +7,8 @@
  (public_name part_2)
  (name part_2)
  (libraries lib_2 files))
+
+(executable
+ (public_name benchmark)
+ (name benchmark)
+ (libraries core_bench lib_2 files))
